@@ -1,6 +1,5 @@
 body {
   overflow-x: hidden;
-  font-family: "Montserrat", sans-serif;
 }
 .logo {
   font-family: "Lobster", cursive;
@@ -33,7 +32,8 @@ body {
   font-family: "Bebas Neue", cursive;
 }
 .single-product h3,
-p {
+p,
+span {
   font-family: "Roboto", sans-serif;
 }
 .product-image {
