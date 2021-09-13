@@ -11,19 +11,23 @@ const showProducts = (products) => {
   for (const product of allProducts) {
     const image = product.images;
     const div = document.createElement("div");
-    div.classList.add("product");
-    div.innerHTML = `<div class="single-product ">
-      <div>
-    <img class="product-image" src=${product.image}></img>
-      </div>
-      <h2>${product.title}</h2>
-      <p>Category: ${product.category}</p>
-      <span><i class="bi bi-star-fill text-warning"></i> ${product.rating.rate}</span>
-      <span><i class="bi bi-person-fill"></i> ${product.rating.count}</span>
+    div.classList.add("col");
+    div.innerHTML = `<div class="single-product card h-100 border-0  ">
       
+    <img class="product-image mx-auto mt-4"  src=${product.image}></img>
+      
+     <div class="card-body text-center">
+     <h2>${product.title}</h2>
+     <p>Category: ${product.category}</p>
+     </div>
+      <div class=" text-center pb-3">
+      <span><i class="bi bi-star-fill text-warning"></i> ${product.rating.rate}</span>
+     <span><i class="bi bi-person-fill"></i> ${product.rating.count}</span>
       <h3 class="mt-3">Price: $ ${product.price}</h3>
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-outline-dark">add to cart</button>
-      <button id="details-btn" class="btn btn-outline-danger">Details</button></div>
+  <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-outline-dark">add to cart</button>
+  <button id="details-btn" class="btn btn-outline-danger">Details</button>
+</div>
+     </div>
       `;
     document.getElementById("all-products").appendChild(div);
   }
