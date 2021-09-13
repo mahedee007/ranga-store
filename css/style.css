@@ -24,9 +24,11 @@ body {
   transition: 0.6s;
 }
 .single-product:hover {
-  box-shadow: 4px 4px 7px #fb637e;
+  box-shadow: 4px 4px 7px #5e549b;
   border-radius: 10px;
   /* border: 1px solid rgba(235, 231, 7, 0.829); */
+  background-color: #fb637e;
+  color: whitesmoke;
 }
 .single-product h2 {
   font-family: "Bebas Neue", cursive;
